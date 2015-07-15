@@ -1,18 +1,12 @@
 ﻿using Drupal_WebCrawlerLib.Projects;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Drupal_WebCrawler
 {
     public partial class frmMain : Form
     {
+        private string filename;
         private Project SiteProject { get; set; }
 
         public frmMain()
@@ -27,9 +21,48 @@ namespace Drupal_WebCrawler
                 if (newProj.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
                 {
                     this.SiteProject = newProj.SiteProject;
-
+                    this.RefreshTitlebar();
                 }
             }
+        }
+
+        private void frmMain_Shown(object sender, EventArgs e)
+        {
+            this.RefreshTitlebar();
+        }
+
+        private void mnuSaveProject_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.filename))
+            {
+                if (sfdSaveProject.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    Project.Save(this.SiteProject, sfdSaveProject.FileName);
+                    this.filename = sfdSaveProject.FileName;
+                }
+            }
+            else
+            {
+                Project.Save(this.SiteProject, this.filename);
+            }
+        }
+
+        
+
+        private void mnuOpenProject_Click(object sender, EventArgs e)
+        {
+            if (ofdOpenProject.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.SiteProject = Project.Load(ofdOpenProject.FileName);
+                this.filename = ofdOpenProject.FileName;
+                this.RefreshTitlebar();
+                this.DisplayWebsiteLinks();
+            }
+        }
+
+        private void DisplayWebsiteLinks()
+        {
+
         }
 
         private void RefreshTitlebar()

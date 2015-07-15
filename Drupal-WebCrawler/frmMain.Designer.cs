@@ -40,6 +40,9 @@
             this.mnuBuild = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuScan = new System.Windows.Forms.ToolStripMenuItem();
+            this.ofdOpenProject = new System.Windows.Forms.OpenFileDialog();
+            this.sfdSaveProject = new System.Windows.Forms.SaveFileDialog();
             this.mnuMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,15 +83,17 @@
             // 
             this.mnuSaveProject.Name = "mnuSaveProject";
             this.mnuSaveProject.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.mnuSaveProject.Size = new System.Drawing.Size(186, 22);
+            this.mnuSaveProject.Size = new System.Drawing.Size(188, 22);
             this.mnuSaveProject.Text = "Save Project";
+            this.mnuSaveProject.Click += new System.EventHandler(this.mnuSaveProject_Click);
             // 
             // mnuOpenProject
             // 
             this.mnuOpenProject.Name = "mnuOpenProject";
             this.mnuOpenProject.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.mnuOpenProject.Size = new System.Drawing.Size(186, 22);
+            this.mnuOpenProject.Size = new System.Drawing.Size(188, 22);
             this.mnuOpenProject.Text = "Open Project";
+            this.mnuOpenProject.Click += new System.EventHandler(this.mnuOpenProject_Click);
             // 
             // mnuCloseProject
             // 
@@ -100,7 +105,7 @@
             // mnuSplit1
             // 
             this.mnuSplit1.Name = "mnuSplit1";
-            this.mnuSplit1.Size = new System.Drawing.Size(149, 6);
+            this.mnuSplit1.Size = new System.Drawing.Size(185, 6);
             // 
             // mnuExit
             // 
@@ -112,6 +117,7 @@
             // mnuProjects
             // 
             this.mnuProjects.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuScan,
             this.mnuBuild});
             this.mnuProjects.Name = "mnuProjects";
             this.mnuProjects.Size = new System.Drawing.Size(56, 20);
@@ -137,8 +143,24 @@
             // 
             this.mnuAbout.Name = "mnuAbout";
             this.mnuAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.mnuAbout.Size = new System.Drawing.Size(152, 22);
+            this.mnuAbout.Size = new System.Drawing.Size(126, 22);
             this.mnuAbout.Text = "About";
+            // 
+            // mnuScan
+            // 
+            this.mnuScan.Name = "mnuScan";
+            this.mnuScan.Size = new System.Drawing.Size(174, 22);
+            this.mnuScan.Text = "Scan";
+            // 
+            // ofdOpenProject
+            // 
+            this.ofdOpenProject.Filter = "Web Crawler Files (*.cwl)|*.cwl|All Files (*.*)|*.*";
+            this.ofdOpenProject.Title = "Please select a project file";
+            // 
+            // sfdSaveProject
+            // 
+            this.sfdSaveProject.DefaultExt = "*.cwl";
+            this.sfdSaveProject.Filter = "Web Crawler Files (*.cwl)|*.cwl|All Files (*.*)|*.*";
             // 
             // frmMain
             // 
@@ -152,6 +174,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Drupal Web Crawler";
+            this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.mnuMainMenu.ResumeLayout(false);
             this.mnuMainMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -173,6 +196,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnuBuild;
         private System.Windows.Forms.ToolStripMenuItem mnuHelp;
         private System.Windows.Forms.ToolStripMenuItem mnuAbout;
+        private System.Windows.Forms.ToolStripMenuItem mnuScan;
+        private System.Windows.Forms.OpenFileDialog ofdOpenProject;
+        private System.Windows.Forms.SaveFileDialog sfdSaveProject;
     }
 }
 

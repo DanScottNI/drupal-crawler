@@ -28,6 +28,9 @@ namespace Drupal_WebCrawlerLib.Web
             this.Uri = uri;
         }
 
+        /// <summary>
+        /// Gets the 
+        /// </summary>
         protected HtmlDocument Document
         {
             get
@@ -43,6 +46,22 @@ namespace Drupal_WebCrawlerLib.Web
             private set
             {
                 this.doc = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets the text of the HTML document as a string.
+        /// </summary>
+        public string DocumentText
+        {
+            get
+            {
+                if (this.Document != null)
+                {
+                    return this.Document.DocumentNode.OuterHtml;
+                }
+
+                return string.Empty;
             }
         }
 

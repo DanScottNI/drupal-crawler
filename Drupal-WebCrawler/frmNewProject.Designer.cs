@@ -32,6 +32,8 @@
             this.txtUri = new System.Windows.Forms.TextBox();
             this.lblSitename = new System.Windows.Forms.Label();
             this.txtSitename = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUri
@@ -66,13 +68,37 @@
             this.txtSitename.Location = new System.Drawing.Point(70, 51);
             this.txtSitename.Name = "txtSitename";
             this.txtSitename.Size = new System.Drawing.Size(696, 25);
-            this.txtSitename.TabIndex = 4;
+            this.txtSitename.TabIndex = 3;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(691, 87);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnOK
+            // 
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK.Location = new System.Drawing.Point(610, 87);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // frmNewProject
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 367);
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(778, 122);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtSitename);
             this.Controls.Add(this.lblSitename);
             this.Controls.Add(this.txtUri);
@@ -93,5 +119,7 @@
         private System.Windows.Forms.TextBox txtUri;
         private System.Windows.Forms.Label lblSitename;
         private System.Windows.Forms.TextBox txtSitename;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOK;
     }
 }
