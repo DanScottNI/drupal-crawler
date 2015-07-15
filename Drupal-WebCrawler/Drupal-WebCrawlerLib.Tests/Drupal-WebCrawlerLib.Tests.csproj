@@ -53,6 +53,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="WebPageTests.cs" />
     <Compile Include="WebsiteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -23,8 +23,8 @@ namespace Drupal_WebCrawler
         {
             if (string.IsNullOrEmpty(txtSitename.Text))
             {
-                Website web = new Website(this.txtUri.Text);
-                this.txtSitename.Text = web.GetWebsiteTitle();
+                WebPage web = new WebPage(this.txtUri.Text);
+                this.txtSitename.Text = web.Title;
             }
         }
 
