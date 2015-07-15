@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drupal-WebCrawler", "Drupal-WebCrawler.csproj", "{FC8CD8CF-0A05-4D2B-844C-CE2C58A23A01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drupal-WebCrawlerLib", "..\Drupal-WebCrawlerLib\Drupal-WebCrawlerLib.csproj", "{8C167FE5-96AB-4FDE-A42D-05C8692C0F83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC8CD8CF-0A05-4D2B-844C-CE2C58A23A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC8CD8CF-0A05-4D2B-844C-CE2C58A23A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC8CD8CF-0A05-4D2B-844C-CE2C58A23A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C167FE5-96AB-4FDE-A42D-05C8692C0F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C167FE5-96AB-4FDE-A42D-05C8692C0F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C167FE5-96AB-4FDE-A42D-05C8692C0F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C167FE5-96AB-4FDE-A42D-05C8692C0F83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

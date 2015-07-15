@@ -1,5 +1,4 @@
-﻿using Drupal_WebCrawlerLib.Projects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Drupal_WebCrawler
 {
-    public partial class frmMain : Form
+    public partial class frmNewProject : Form
     {
-        private Project SiteProject { get; set; }
-
-        public frmMain()
+        public frmNewProject()
         {
             InitializeComponent();
-        }
-        
-        private void mnuNewProject_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
